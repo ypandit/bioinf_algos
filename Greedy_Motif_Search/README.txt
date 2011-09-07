@@ -4,9 +4,9 @@ This program searches sequences multiple protein sequences for top 20 motifs usi
 It takes input as a FastA file and the l-mer is the size of the window/motif.
 
 
-For running the program at the shell/cmd run the following
+For running the program at the shell/cmd run the following:
 
-java -jar GreedyMotifSearch.jar <input.fasta> <l-mer>
+  java -jar GreedyMotifSearch.jar <input.fasta> <l-mer>
 
 
 We have used the BioJava package for file handling. Rest of the code is completely written by the authors.
