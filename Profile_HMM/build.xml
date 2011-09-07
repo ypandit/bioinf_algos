@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ProfileHMM" default="jar" basedir=".">
+    
+    <property name="src" location="src"/>
+    <property name="build" location="build"/>
+    <property name="dist"  location="dist"/>
+    
+    <target name="init">
+        <tstamp/>
+        <mkdir dir="${build}"/>
+    </target>
+    
+    <target name="compile" depends = "init">
+        <javac srcdir="${src}" destdir="${build}"/>
+    </target>
+    
+    <target name = "jar" depends = "compile">
+        <delete file = "ProfileHMM.jar"/>
+        <delete file = "MANIFEST.MF"/>
+        <manifest file = "MANIFEST.MF">
+            <attribute name = "Main-Class" value = "Main"/>
+            <attribute name = "Class-Path" value = "."/>
+        </manifest>
+        <jar jarfile = "ProfileHMM.jar" basedir = "${build}" manifest = "MANIFEST.MF"/>
+        <delete file = "MANIFEST.MF"/>
+   </target>
+   
+   <target name="clean">
+       <delete dir="${build}"/>
+       <delete file = "ProfileHMM.jar"/>
+       <delete file = "MANIFEST.MF"/>
+   </target>
+
+</project>
