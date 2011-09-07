@@ -165,17 +165,7 @@ public class GreedyMotifSearch2 {
     }
 
     private static List<Consensus> sortConsensusMotifs() {
-        /*List<Consensus> newCons = new ArrayList<Consensus>();
-
-        for (int c1 = 1; c1 < cons.size(); c1++) {
-            for (int c2 = 0; c2 < (cons.size() - 1); c2++) {
-                Consensus tC1 = cons.get(c1);
-                Consensus tC2 = cons.get(c2);
-            }
-        }
-
-        return newCons;*/
-
+        
         //System.out.println("Sorting the Consensus List");
         Collections.sort(cons,
             new Comparator<Consensus>() {
